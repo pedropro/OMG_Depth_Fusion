@@ -1,6 +1,9 @@
 /*
 *  Copyright 2017 Pedro Proença <p.proenca@surrey.ac.uk> (University of Surrey)
 */
+/*
+ *  Copyright 2017 Pedro Proenca <p.proenca@surrey.ac.uk> (University of Surrey)
+ */
 
 #pragma once
 #include <opencv2/opencv.hpp>
