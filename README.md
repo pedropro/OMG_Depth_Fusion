@@ -52,4 +52,4 @@ Two short RGB-D sequences are included as examples. To add more sequences, downl
 [TUM_RGBD](https://vision.in.tum.de/data/datasets/rgbd-dataset) or
 [ICL-NUIM](https://www.doc.ic.ac.uk/~ahanda/VaFRIC/iclnuim.html)
 and place them inside the directory ```./Data``` the same way it has been done for the examples.
-Then add the respective camera parameters in the same format as the others as ```calib_params.xml```
+Then add the respective camera parameters in the same format as the examples as ```calib_params.xml```
