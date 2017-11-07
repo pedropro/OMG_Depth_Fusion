@@ -10,7 +10,7 @@ This is a stripped down version: It does not include the VO system, thus instead
 
 ## Dependencies
 
-* Opencv
+* OpenCV
 * Eigen3
 
 ## Ubuntu Instructions
