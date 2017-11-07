@@ -2,7 +2,7 @@
 Implementation of the filter proposed in:
 
 **Paper:** Probabilistic RGB-D Odometry based on Points, Lines and Planes Under Depth Uncertainty, P. Proença and Y. Gao
-* [arxiv] (https://arxiv.org/abs/1706.04034)
+[arxiv](https://arxiv.org/abs/1706.04034)
 
 The OMG filter is aimed at denoising and hole-filling the depth maps given by a depth sensor, but also (more importantly) capturing the depth uncertainty though spatio-temporal observations, which proved to be useful as an input to a probabilistic visual odometry system.
 
