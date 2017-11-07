@@ -48,7 +48,7 @@ General Format
 
 ## Data
 
-Two short RGB-D sequences are included. To add more sequences, download from:
+Two short RGB-D sequences are included as examples. To add more sequences, download from:
 [TUM_RGBD](https://vision.in.tum.de/data/datasets/rgbd-dataset) or
 [ICL-NUIM](https://www.doc.ic.ac.uk/~ahanda/VaFRIC/iclnuim.html)
 and place them inside the directory ```./Data``` the same way it has been done for the examples.
