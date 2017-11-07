@@ -9,8 +9,8 @@ This release does not include the VO system, thus instead of using the VO frame-
 
 # Dependencies
 
-- Opencv
-- Eigen3
+Opencv
+Eigen3
 
 # Ubuntu Instructions
 
@@ -24,4 +24,3 @@ This release does not include the VO system, thus instead of using the VO frame-
 Use one of this to run the executable
 >> ./test_OMG 5 9 TUM_RGBD sitting_static_short
 >> ./test_OMG 5 9 ICL_NUIM living_room_traj0_frei_png_short
-
