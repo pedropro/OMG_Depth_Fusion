@@ -9,17 +9,18 @@ This release does not include the VO system, thus instead of using the VO frame-
 
 # Dependencies
 
-Opencv
-Eigen3
+* Opencv
+* Eigen3
 
 # Ubuntu Instructions
 
->> cd OMG
->> mkdir build
->> cd build
->> cmake ../
->> make
-
+To compile, inside the directory './OMG' type:
+```
+mkdir build
+cd build
+cmake ../
+make
+```
 
 Use one of this to run the executable
 >> ./test_OMG 5 9 TUM_RGBD sitting_static_short
