@@ -23,8 +23,9 @@ cd build
 cmake ../
 make
 ```
-To run the executable 
+To run the executable type:
 ```./test_OMG 4 9 TUM_RGBD sitting_static_short```
+or
 ```./test_OMG 4 9 ICL_NUIM living_room_traj0_frei_png_short```
 
 ## Windows Instructions
