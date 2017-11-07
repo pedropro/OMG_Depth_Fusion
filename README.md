@@ -13,8 +13,9 @@ This release does not include the VO system, thus instead of using the VO frame-
 * Eigen3
 
 # Ubuntu Instructions
+Tested with Ubuntu 14.04
 
-To compile, inside the directory './OMG' type:
+To compile, inside the directory ``./OMG`` type:
 ```
 mkdir build
 cd build
@@ -22,6 +23,6 @@ cmake ../
 make
 ```
 
-Use one of this to run the executable
->> ./test_OMG 5 9 TUM_RGBD sitting_static_short
->> ./test_OMG 5 9 ICL_NUIM living_room_traj0_frei_png_short
+Use one of this to run the executable:
+```./test_OMG 4 9 TUM_RGBD sitting_static_short```
+```./test_OMG 4 9 ICL_NUIM living_room_traj0_frei_png_short```
