@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<RGB_intrinsic_params type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    481.20 	0 	319.50
+    0 	-480.00 	239.50
+    0 	0 	1</data></RGB_intrinsic_params>
+<RGB_distortion_coefficients type_id="opencv-matrix">
+  <rows>1</rows>
+  <cols>5</cols>
+  <dt>d</dt>
+  <data>
+    0 0
+    0 0
+    0</data></RGB_distortion_coefficients>
+<IR_intrinsic_params type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    481.20 0 319.50
+    0 	-480.0 239.50
+    0 	0 	1</data></IR_intrinsic_params>
+<IR_distortion_coefficients type_id="opencv-matrix">
+  <rows>1</rows>
+  <cols>5</cols>
+  <dt>d</dt>
+  <data>0 0
+    0 0
+    0</data></IR_distortion_coefficients>
+<Rotation type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    1 0
+    0 0
+    1 0
+    0 0
+    1</data></Rotation>
+<Translation type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>1</cols>
+  <dt>d</dt>
+  <data>
+    0 0 0</data></Translation>
+</opencv_storage>

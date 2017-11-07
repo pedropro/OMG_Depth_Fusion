@@ -1,0 +1,3 @@
+# accelerometer data
+# file: 'rgbd_dataset_freiburg3_sitting_static.bag'
+# timestamp ax ay az
