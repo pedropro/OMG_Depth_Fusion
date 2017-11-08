@@ -215,7 +215,7 @@ int main(int argc, char ** argv)
 		U_reg = (fx*cloud_reg.col(0).array()/cloud_reg.col(2).array() + cx).template cast<int>();
 		V_reg = (fy*cloud_reg.col(1).array()/cloud_reg.col(2).array() + cy).template cast<int>();
 
-		for(int pt=nr_points_acc; pt>-1; pt--){
+		for(int pt=nr_points_acc-1; pt>-1; pt--){
 			int u_p = U_reg(pt); int v_p = V_reg(pt); float r_p = range_reg(pt);
 			float r_var = point_var_reg_array[pt];
 			if(r_p>0 && u_p>-1 && v_p>-1 && u_p < 640 && v_p < 480){
