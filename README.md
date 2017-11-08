@@ -43,8 +43,10 @@ Just make the necessary changes to link the project with OpenCV and Eigen.
 General Format
 ```./test_OMG <max_nr_frames> <consistency_threshold> <dataset_directory> <sequence_name>```
 
-* ***max_nr_frames:*** is the window size - 1, i.e., the maximum number of previous frames used for fusion
-* ***consistency threshold:*** is used to avoid fusing inconsistent measurements, if the squared distance between a new measurement and the current estimate is more than current uncertainty times this threshold than the new measurement is ignored. Setting this higher may produce better quality but will capture less the temporal uncertainty
+* ***max_nr_frames:*** is the window size - 1, i.e., the maximum number of previous frames used for fusion.
+* ***consistency threshold:*** is used to avoid fusing inconsistent measurements, if the squared distance between a new measurement and the current estimate is more than current uncertainty times this threshold than the new measurement is ignored. Setting this higher may produce better quality but will capture less the temporal uncertainty.
+
+Three windows should pop up, showing the raw depth, the fused depth and the respective fused uncertainty.
 
 ## Data
 
