@@ -85,8 +85,6 @@ int main(int argc, char ** argv)
 	Eigen::MatrixXf cloud_reg(MAX_NR_FUSION_FRAMES*mxn,3);
 	Eigen::MatrixXf cloud_frame(mxn,3);
 	Eigen::ArrayXf range_frame(mxn,1);
-	Eigen::ArrayXf range_reg(MAX_NR_FUSION_FRAMES*mxn,1);
-	Eigen::ArrayXf range_reg_sqr(MAX_NR_FUSION_FRAMES*mxn,1);
 	cv::Mat_<float> d_sensor_model_uncertainty(height,width);
 	cv::Mat_<float> d_conv(height,width);
 	cv::Mat_<float> d_conv_uncertainty(height,width); // output
@@ -169,7 +167,6 @@ int main(int argc, char ** argv)
 		nr_points_acc -= offset;
 		cloud_reg.block(0,0,nr_points_acc,3) = cloud_reg.block(offset,0,nr_points_acc,3);
 		memcpy(point_var_reg_array, &point_var_reg_array[offset], sizeof(float)*nr_points_acc);
-		range_reg.block(0,0,nr_points_acc,1) = range_reg.block(offset,0,nr_points_acc,1);
 		for(int j=0;j<MAX_NR_FUSION_FRAMES;j++)
 			frame_ptr[j]-=offset;
 
@@ -210,7 +207,12 @@ int main(int argc, char ** argv)
 		range_OMG_map += range_map.mul(norm_weights);
 		range_OMG_var_map += norm_weights.mul((range_cov_map + range_map.mul(range_map)));
 
-		range_reg_sqr = range_reg*range_reg;
+		// Compute range from point cloud (There's a faster way to do this from depth to range)
+		Eigen::ArrayXf range_reg_sqr = cloud_reg.col(0).array()*cloud_reg.col(0).array() +
+					cloud_reg.col(1).array()*cloud_reg.col(1).array() +
+					cloud_reg.col(2).array()*cloud_reg.col(2).array();
+		Eigen::ArrayXf range_reg = range_reg_sqr.sqrt();
+
 		// Projection
 		U_reg = (fx*cloud_reg.col(0).array()/cloud_reg.col(2).array() + cx).template cast<int>();
 		V_reg = (fy*cloud_reg.col(1).array()/cloud_reg.col(2).array() + cy).template cast<int>();
@@ -243,7 +245,6 @@ int main(int argc, char ** argv)
 
 		cloud_reg.block(nr_points_acc,0,nr_valid_pts,3) = cloud_frame.block(0,0,nr_valid_pts,3);
 		memcpy(&point_var_reg_array[nr_points_acc], point_var_array, sizeof(float)*nr_valid_pts);
-		range_reg.block(nr_points_acc,0,nr_valid_pts,1) = range_frame.block(0,0,nr_valid_pts,1);
 
 		// Update pointers
 		for(int j=0; j<MAX_NR_FUSION_FRAMES-1;j++)
